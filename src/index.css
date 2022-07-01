@@ -1,0 +1,20 @@
+
+body {
+    margin: 0;
+    font-family: goldman;
+    position: relative;
+}
+
+code {
+    font-family: goldman;
+}
+
+* {
+    transition: all ease 0.3s;
+}
+
+@media screen and (max-width:768px) {
+    .disN {
+        display: none !important;
+    }
+}
