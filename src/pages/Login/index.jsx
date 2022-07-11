@@ -5,16 +5,26 @@ const Login = () => {
   const key = "a7bfdc2b818648539fddc6434976a7fe";
   const redirect = "http://localhost:3000";
   const scope = [
-    "user-follow-modify",
-    "user-follow-read",
-    "app-remote-control",
+    "user-modify-playback-state",
+    "ugc-image-upload",
+    "user-read-playback-state",
+    "user-read-currently-playing",
+    "user-read-playback-state",
+    "user-read-currently-playing",
+    "user-read-recently-played",
+    "user-read-playback-position",
+    "user-top-read",
     "playlist-read-collaborative",
     "playlist-modify-public",
     "playlist-read-private",
     "playlist-modify-private",
+    "app-remote-control",
     "streaming",
+    "app-remote-control",
+    "streaming",
+    "user-library-modify",
+    "user-library-read",
   ];
-  console.log();
   const url = `https://accounts.spotify.com/authorize?response_type=token&client_id=${key}&redirect_uri=${redirect}&scope=${scope.join(
     " "
   )}`;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Countiner = styled.div`
   background: #000;
-  height: 80vh;
+  height: 100%;
   overflow: hidden;
   .logo {
     width: 90%;
@@ -37,14 +37,15 @@ export const Countiner = styled.div`
 
   .playList {
     padding-left: 8px;
-    font-size: 24px;
+    font-size: 18px;
     color: #e4dddd;
     height: 55vh;
     overflow-y: auto;
-    max-height: 100%;
+
     ul {
       list-style: none;
       overflow-y: auto;
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
       li {

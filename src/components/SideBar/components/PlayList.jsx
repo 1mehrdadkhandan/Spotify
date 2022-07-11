@@ -16,19 +16,30 @@ const PlayList = () => {
           },
         }
       );
-        const {items} = data
-        action({type:context.SET_PLAYLIST , playList:items})
-        };
+      const { items } = data;
+      action({ type: context.SET_PLAYLIST, playList: items });
+    };
     getPlayList();
-
-  }, [action,token]);
+  }, [action, token]);
+  const changePlaylist = (id) => {
+    action({ type: context.SET_PLAYLIST_ID, selectedPlayList: id });
+  };
   return (
     <div className="playList">
       <h3>Play List</h3>
       <ul>
-          {playList.map(({id,name})=>{
-            return  (<li key = {id}>{name}</li>)
-          })} 
+        {playList.map(({ id, name }) => {
+          return (
+            <li
+              onClick={() => {
+                changePlaylist(id);
+              }}
+              key={id}
+            >
+              {name}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

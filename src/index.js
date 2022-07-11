@@ -7,7 +7,7 @@ import { initialState, Reduce } from './util/Reducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <StateProvider initialState={initialState} reducer={Reduce}>
+    <StateProvider  initialState={initialState} reducer={Reduce}>
         <App />
     </StateProvider>
 );

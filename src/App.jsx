@@ -6,7 +6,6 @@ import { UseProvider } from "./util/useContext";
 
 const App = () => {
   const [{ token }, action] = UseProvider();
-  console.log(action);
   useEffect(() => {
     let hash = window.location.hash;
     let token = hash.substring(1);
